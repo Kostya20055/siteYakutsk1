@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div  class="row div" >
+		<div style="height: 500px; width: 300px" class="door">
+			<img src="door.png" class="h-100 w-100">
+		</div>
+		<div style="height: 500px; width: 300px" class="door2">
+			<img src="door2.png" class="h-100 w-100">
+		</div>
+		<div style="height: 500px; width: 300px" class="door3">
+			<img src="door3.png" class="h-100 w-100">
+		</div>
+	</div>
+	<div style="display:none; height: 1000px" class="world">
+		<div style="background-image: url(bg.jpg); background-size: 100% 100%" class="h-100 w-100 ">
+			<h2 class="text-white">Найдите мантию, метлу и палачку Гарри Потера, и набери 3 очка.</h2>
+			<h1 style="" class="text-white scoretext">0</h1>
+			<button style=" position: absolute;" class="btn-success">выйти из игры</button>
+			<img style="height: 150px; width: 150px; display: block; position: absolute; margin-top:700px; " src="palochka.png" class="palca">
+			<img style="height: 50px; width: 50px; position: absolute; " src="ring.png" class="">
+			<img style="height: 150px; width: 150px;  position: absolute; display: block; margin-left: 800px; margin-top: 700px" src="mantiya.png" class="man">
+			<img style="height: 100px; width: 100px; position: absolute; " src="gun.png">
+			<img style="height: 100px; width: 100px;position: absolute; margin-left: 500px; display: block; " src="metla.png" class="met">
+		</div>
+	</div>
+	<div style="display:none; height: 1000px" class="world2">
+		<div style="background-image: url(1513349834_3.jpg); background-size: 100% 100%" class="h-100 w-100">
+			<h2 class="text-white">Помогите Талиону найти свой лук, меч и молоток</h2>
+			<h1 class="text-white scoretext">0</h1>
+			<button style=" position: absolute;" class="btn-success">выйти из игры</button>
+			<img style="height: 150px; width: 150px; display: block; position: absolute; margin-top:700px;" src="Азкар.png" class="luc">
+			<img style="height: 150px; width: 150px;  position: absolute; display: block; margin-left: 1000px" src="Кузнечный_молот_(Великолепный_дар).png" class="molot">
+			<img style="height: 150px; width: 150px;  position: absolute; display: block; margin-left: 700px; margin-top: 700px" src="57rbl0hx.png" class="mech">
+		</div>
+	</div>
+	<script type="text/javascript">
+		let score =0
+		document.querySelector(".door").onclick = function(){
+			document.querySelector(".door").style.display = "none";
+			document.querySelector(".world").style.display = "block";
+			document.querySelector(".door2").style.display = "none";
+			document.querySelector(".door3").style.display = "none";
+			alert(".добро пожаловать в Хогварц")}
+			document.querySelector(".palca").onclick = function(){
+				document.querySelector(".palca").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;
+			}
+			document.querySelector(".man").onclick = function(){
+				document.querySelector(".man").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;
+			}
+			document.querySelector(".met").onclick = function(){
+				document.querySelector(".met").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;
+			}
+			document.querySelector(".door2").onclick = function(){
+				document.querySelector(".door").style.display = "none";
+				document.querySelector(".world2").style.display = "block";
+				document.querySelector(".door2").style.display = "none";
+				document.querySelector(".door3").style.display = "none";
+				alert(".Добро пожаловать в средиземье")	
+			}
+			document.querySelector(".luc").onclick = function(){
+				document.querySelector(".luc").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;	
+			}
+			document.querySelector(".molot").onclick = function(){
+				document.querySelector(".molot").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;
+			}
+			document.querySelector(".mech").onclick = function(){
+				document.querySelector(".mech").style.display = "none";
+				score=score+1
+				document.querySelector(".scoretext").innerHTML = score;
+			}
+	</script>
+</body>
+</html>
